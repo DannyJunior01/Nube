@@ -1,0 +1,614 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #003355; 
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); 
+    border-bottom: 2px solid #4d4d4d; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.navbar ul li {
+    margin: 0 20px; 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 12px;
+    font-weight: 500; 
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    padding: 8px 15px; 
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+
+.navbar ul li img.logo {
+    width: 50px; 
+    height: auto;
+    margin-right: 30px; 
+}
+
+.navbar ul li a:hover {
+    background-color: #00b3b3; 
+    color: #ffffff; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 8px rgba(0, 179, 179, 0.5); 
+}
+
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-left: 15px;  
+}
+
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 47vh; 
+    background-color: #003355; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; 
+    padding: 20px;
+    max-width: 80%;
+}
+
+.hero-text h1 {
+    font-size: 48px; 
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.hero-buttons {
+    margin-top: 30px; 
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 2px 20px;
+    margin: 4px;
+    background-color: #00ccff; /* Color de fondo para los botones */
+    border-radius: 40px; /* Bordes redondeados */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0099cc; /* Cambia el color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento */
+}
+
+.btn-primary {
+    background-color: #000000; /* Color para el botón primario */
+}
+
+.btn-primary:hover {
+    background-color: #430b71; /* Efecto hover del botón primario */
+}
+
+
+/* Sección de Servicios */
+.services {
+    background-color: black;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para ocultar el desbordamiento */
+}
+
+/* Título de la sección */
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contenedor de servicios */
+.service-container {
+    display: flex;
+    justify-content: flex-start; /* Alineación inicial a la izquierda */
+    gap: 40px;
+    animation: slideIn 30s linear infinite; /* Animación de carrusel hacia la derecha */
+}
+
+/* Tarjetas de servicio */
+.service {
+    text-align: center;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #111, #222);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 204, 255, 0.3);
+    transition: transform 0.1s, box-shadow 0.1s, filter 0.1s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Animación de entrada en secuencia */
+.service:nth-child(1) { animation-delay: 0.1s; }
+.service:nth-child(2) { animation-delay: 0.1s; }
+.service:nth-child(3) { animation-delay: 0.1s; }
+
+/* Efecto hover con escala y sombra */
+.service:hover {
+    transform: scale(1.1); /* Efecto de aumento de tamaño */
+    box-shadow: 0 8px 25px rgba(0, 204, 255, 0.6); /* Brillo en hover */
+    filter: brightness(1.2); /* Resalta la tarjeta */
+}
+
+/* Estilos de imágenes */
+.service img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Efecto hover sobre la imagen */
+.service img:hover {
+    transform: scale(1.2); /* Zoom sobre la imagen */
+    filter: brightness(1.3); /* Aumenta el brillo de la imagen */
+}
+
+/* Títulos */
+.service h3 {
+    margin: 10px 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Descripción */
+.service p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Animaciones Keyframes */
+
+/* Entrada suave desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Entrada gradual del título */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Carrusel de servicios (animación horizontal hacia la derecha) */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Empieza desde la izquierda */
+    }
+    50% {
+        transform: translateX(0); /* Se encuentra en el centro */
+    }
+    100% {
+        transform: translateX(100%); /* Se desplaza hacia la derecha */
+    }
+}
+
+/* Sección de Almacenamiento */
+.storage {
+    background-color: black;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.storage h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.storage p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+/* Contenedor con tarjetas */
+.storage-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Estilos de cada caja de almacenamiento */
+.storage-box {
+    background: linear-gradient(145deg, #111, #222);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 4px 15px rgba(0, 204, 255, 0.3);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.storage-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 25px rgba(0, 204, 255, 0.6);
+}
+
+.storage-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #00ccff;
+}
+
+/* Barra de progreso animada */
+.progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+    box-shadow: inset 0 0 8px rgba(0, 204, 255, 0.5);
+}
+
+.progress-fill {
+    background: linear-gradient(to right, #004466, #00ccff);
+    height: 100%;
+    width: 70%; /* Modificar para cada almacenamiento */
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Animación de brillo en la barra */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00ccff; }
+    100% { box-shadow: 0 0 15px #00ccff; }
+}
+
+.storage-value {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+
+/* Sección de Reseñas */
+.reviews {
+    background-color: black;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Título de reseñas */
+.reviews-container h2 {
+    text-align: left;
+    width: 30%;
+    color: #ffffff;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lista de reseñas */
+.reviews-list {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;  /* Permite que las reseñas se acomoden */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilo de cada reseña */
+.review {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px; /* Max-width para dar un tamaño uniforme */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 204, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    overflow: hidden; /* Para que no se desborden los bordes */
+}
+
+/* Efecto hover en las reseñas */
+.review:hover {
+    transform: scale(1.05); /* Aumento de tamaño */
+    box-shadow: 0 8px 25px rgba(0, 204, 255, 0.6); /* Resalta con sombra */
+    filter: brightness(1.2); /* Brillo */
+}
+
+/* Imagen redonda (como foto de perfil) */
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    margin-bottom: 15px;
+    border: 3px solid #00ccff; /* Borde de la imagen */
+}
+
+/* Nombre del cliente */
+.review strong {
+    color: #00ccff;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Descripción de la reseña */
+.review p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Animaciones Keyframes */
+
+/* Entrada suave desde abajo para la sección de reseñas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Sección Quiénes somos */
+.about-us {
+    background-color: #000000;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contenedor principal con flexbox para alinear logo y descripción */
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo a la izquierda */
+.about-logo img {
+    width: 500px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+/* Descripción a la derecha */
+.about-description {
+    max-width: 600px; /* Máximo ancho para la descripción */
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Animación gradual de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Sección Contáctanos */
+.contact-us {
+    background-color: #000000; /* Fondo oscuro */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Título de la sección */
+.contact-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contenedor principal con flexbox para alinear la descripción y el formulario */
+.contact-us-content {
+    display: flex;
+    align-items: flex-start; /* Ajusta la alineación de los elementos */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Descripción a la izquierda */
+.contact-description {
+    max-width: 600px; /* Máximo ancho para la descripción */
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-right: 30px;
+}
+
+/* Estilos para el formulario a la derecha */
+.contact-form {
+    width: 600px; /* Ajusta el ancho del formulario */
+    background-color: #222; /* Fondo más oscuro para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(182, 236, 250, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333; /* Fondo oscuro para los campos */
+    color: #ffffff;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00b0ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0084b4;
+}
+
+/* Estilos para redes sociales debajo del texto */
+.social-links {
+    margin-top: 30px; /* Espacio para separarlo del texto */
+    color: #ffffff;
+    text-align: left;
+}
+
+.social-links h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    align-items: center; /* Alinea verticalmente los íconos */
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 80px;  /* Tamaño uniforme para los íconos */
+    height: 40px; /* Tamaño uniforme para los íconos */
+    object-fit: contain; /* Asegura que las imágenes no se distorsionen */
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Animación gradual de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
